@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const navItems = [
   { label: "Services", href: "#services" },
@@ -30,17 +31,12 @@ const Navbar = () => {
       animate={{ y: 0 }}
       transition={{ duration: 0.6 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "glass-card shadow-lg" : "bg-transparent"
+        scrolled ? "bg-background/80 backdrop-blur-xl border-b border-border" : "bg-transparent"
       }`}
     >
       <nav className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
-        <a href="#" className="flex items-center gap-2">
-          <div className="w-9 h-9 rounded-lg bg-primary flex items-center justify-center font-display font-bold text-primary-foreground text-lg">
-            N
-          </div>
-          <span className="font-display font-bold text-xl text-foreground">
-            Next<span className="text-primary">AI</span>
-          </span>
+        <a href="#" className="flex items-center gap-2" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+          <img src={logo} alt="NextAI Commerce" className="h-10" />
         </a>
 
         {/* Desktop */}
@@ -49,16 +45,17 @@ const Navbar = () => {
             <li key={item.href}>
               <button
                 onClick={() => handleClick(item.href)}
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors relative group"
               >
                 {item.label}
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
               </button>
             </li>
           ))}
           <li>
             <button
               onClick={() => handleClick("#contact")}
-              className="px-5 py-2 rounded-lg bg-primary text-primary-foreground font-semibold text-sm hover:opacity-90 transition-opacity"
+              className="px-5 py-2.5 rounded-lg bg-primary text-primary-foreground font-semibold text-sm hover:brightness-110 transition-all"
             >
               Get Started
             </button>
@@ -82,23 +79,23 @@ const Navbar = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden glass-card border-t border-border"
+            className="md:hidden bg-background/95 backdrop-blur-xl border-t border-border"
           >
-            <ul className="flex flex-col gap-4 px-6 py-6">
+            <ul className="flex flex-col gap-1 px-6 py-6">
               {navItems.map((item) => (
                 <li key={item.href}>
                   <button
                     onClick={() => handleClick(item.href)}
-                    className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                    className="w-full text-left py-3 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
                   >
                     {item.label}
                   </button>
                 </li>
               ))}
-              <li>
+              <li className="pt-2">
                 <button
                   onClick={() => handleClick("#contact")}
-                  className="w-full px-5 py-2 rounded-lg bg-primary text-primary-foreground font-semibold text-sm"
+                  className="w-full px-5 py-3 rounded-lg bg-primary text-primary-foreground font-semibold text-sm"
                 >
                   Get Started
                 </button>

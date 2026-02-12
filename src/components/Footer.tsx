@@ -1,26 +1,52 @@
+import logo from "@/assets/logo.png";
+
+const footerLinks = {
+  Services: ["Account Management", "Advertising + SEO", "Recovery", "Logistics"],
+  Company: ["About", "Careers", "Blog", "Contact"],
+  Resources: ["Case Studies", "Knowledge Base", "FAQ", "Partners"],
+};
+
 const Footer = () => {
   return (
-    <footer className="px-6 py-12 md:px-12 border-t border-border">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-        <div className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center font-display font-bold text-primary-foreground text-sm">
-            N
+    <footer className="border-t border-border bg-card">
+      <div className="max-w-7xl mx-auto px-6 py-16 md:px-12">
+        <div className="grid md:grid-cols-5 gap-12 mb-12">
+          {/* Brand */}
+          <div className="md:col-span-2">
+            <img src={logo} alt="NextAI Commerce" className="h-10 mb-4" />
+            <p className="text-sm text-muted-foreground max-w-xs leading-relaxed">
+              Scale faster on Amazon with human expertise and AI automation. Optimize listings, profits, ads, and inventory.
+            </p>
           </div>
-          <span className="font-display font-bold text-lg text-foreground">
-            Next<span className="text-primary">AI</span> Commerce
-          </span>
+
+          {/* Links */}
+          {Object.entries(footerLinks).map(([title, links]) => (
+            <div key={title}>
+              <h4 className="font-display font-semibold text-sm text-foreground mb-4">{title}</h4>
+              <ul className="space-y-3">
+                {links.map((link) => (
+                  <li key={link}>
+                    <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                      {link}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
 
-        <p className="text-sm text-muted-foreground">
-          © {new Date().getFullYear()} NextAI Commerce. All rights reserved.
-        </p>
-
-        <div className="flex gap-6">
-          {["Twitter", "LinkedIn", "YouTube"].map((s) => (
-            <a key={s} href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-              {s}
-            </a>
-          ))}
+        <div className="pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4">
+          <p className="text-xs text-muted-foreground">
+            © {new Date().getFullYear()} NextAI Commerce. All rights reserved.
+          </p>
+          <div className="flex gap-6">
+            {["Twitter", "LinkedIn", "YouTube"].map((s) => (
+              <a key={s} href="#" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
+                {s}
+              </a>
+            ))}
+          </div>
         </div>
       </div>
     </footer>
