@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import TrustedBy from "@/components/TrustedBy";
+import FounderSection from "@/components/FounderSection";
 import Services from "@/components/Services";
 import Metrics from "@/components/Metrics";
 import WhyUs from "@/components/WhyUs";
@@ -14,6 +15,7 @@ const Index = () => {
       <Navbar />
       <Hero />
       <TrustedBy />
+      <FounderSection />
       <Services />
       <Metrics />
       <WhyUs />

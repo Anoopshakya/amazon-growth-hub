@@ -7,8 +7,8 @@ const metrics = [
   { icon: ShoppingCart, label: "Conversion Lift", value: 38, prefix: "+", suffix: "%", sub: "within 90 days" },
   { icon: BarChart3, label: "TACOS Reduction", value: 27, prefix: "-", suffix: "%", sub: "avg improvement" },
   { icon: Package, label: "In-Stock Rate", value: 99.2, suffix: "%", sub: "maintained avg", decimals: 1 },
-  { icon: DollarSign, label: "Cash Recovered", value: 2.1, prefix: "$", suffix: "M+", sub: "total reimbursements", decimals: 1 },
-  { icon: Target, label: "NTB Revenue", value: 52, prefix: "+", suffix: "%", sub: "new-to-brand growth" },
+  { icon: DollarSign, label: "Cash Recovered", value: 2.1, prefix: "$", suffix: "M+", sub: "financial forensics", decimals: 1 },
+  { icon: Target, label: "Sellers Consulted", value: 1000, prefix: "", suffix: "+", sub: "worldwide" },
 ];
 
 function AnimatedCounter({ value, prefix = "", suffix = "", decimals = 0 }: { value: number; prefix?: string; suffix?: string; decimals?: number }) {
@@ -36,7 +36,7 @@ function AnimatedCounter({ value, prefix = "", suffix = "", decimals = 0 }: { va
 
   return (
     <span ref={ref} className="font-display text-4xl sm:text-5xl font-bold text-gradient">
-      {prefix}{count.toFixed(decimals)}{suffix}
+      {prefix}{decimals > 0 ? count.toFixed(decimals) : Math.floor(count).toLocaleString()}{suffix}
     </span>
   );
 }
@@ -57,10 +57,10 @@ const Metrics = () => {
           className="text-center mb-16"
         >
           <p className="text-sm text-primary font-semibold tracking-wider uppercase mb-3">Proven Results</p>
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 text-foreground">
             Results that <span className="text-gradient">speak</span>
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+          <p className="text-secondary-foreground text-lg max-w-2xl mx-auto">
             Real metrics from real Amazon brands we've scaled.
           </p>
         </motion.div>
