@@ -43,7 +43,7 @@ const Contact = () => {
             <motion.a
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              href="https://calendly.com/barry-guze-next"
+              href="https://calendly.com/barry-guze-next/30min?"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg border border-border bg-secondary/50 text-foreground font-semibold text-base hover:bg-secondary transition-all"

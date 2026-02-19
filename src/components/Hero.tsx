@@ -60,7 +60,9 @@ const Hero = () => {
             <motion.button
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              onClick={() => document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" })}
+              onClick={() =>
+                        window.open("https://calendly.com/barry-guze-next/30min?", "_blank")
+                      }
               className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg bg-primary text-primary-foreground font-semibold text-base hover:brightness-110 transition-all shadow-[0_0_30px_-5px_hsl(88_68%_48%/0.3)]"
             >
               Book a Strategy Call
@@ -70,7 +72,6 @@ const Hero = () => {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               onClick={() => document.querySelector("#services")?.scrollIntoView({ behavior: "smooth" })} 
-            {/*  onClick={() => window.open("https://calendly.com/barry-guze-next", "_blank")} */}
               className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg border border-border bg-secondary/50 text-foreground font-semibold text-base hover:bg-secondary transition-all"
             >
               Explore Services

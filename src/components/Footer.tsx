@@ -13,7 +13,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-5 gap-12 mb-12">
           {/* Brand */}
           <div className="md:col-span-2">
-            <img src={logoDark} alt="NextAI Commerce" className="h-9 mb-4" />
+            <img src={logoDark} alt="NextAI Commerce" className="h-18 mb-4" />
             <p className="text-sm text-secondary-foreground max-w-xs leading-relaxed mb-4">
               Scale faster on Amazon with battle-tested operator expertise and intelligent automation.
             </p>
@@ -48,7 +48,7 @@ const Footer = () => {
           </p>
           <div className="flex gap-6">
             {["Twitter", "LinkedIn", "YouTube"].map((s) => (
-              <a key={s} href="#" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
+              <a key={s} href="https://www.linkedin.com/in/barryguze/" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
                 {s}
               </a>
             ))}

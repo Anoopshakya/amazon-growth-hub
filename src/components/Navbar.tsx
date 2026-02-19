@@ -55,7 +55,10 @@ const Navbar = () => {
           ))}
           <li>
             <button
-              onClick={() => handleClick("#contact")}
+              //onClick={() => handleClick("#contact")}
+              onClick={() =>
+                        window.open("https://calendly.com/barry-guze-next/30min?", "_blank")
+                      }
               className="px-5 py-2.5 rounded-lg bg-primary text-primary-foreground font-semibold text-sm hover:brightness-110 transition-all"
             >
               Book a Call
@@ -95,7 +98,10 @@ const Navbar = () => {
               ))}
               <li className="pt-2">
                 <button
-                  onClick={() => handleClick("#contact")}
+                  //onClick={() => handleClick("#contact")}
+                  onClick={() =>
+                        window.open("https://calendly.com/barry-guze-next/30min?", "_blank")
+                      }
                   className="w-full px-5 py-3 rounded-lg bg-primary text-primary-foreground font-semibold text-sm"
                 >
                   Book a Call
