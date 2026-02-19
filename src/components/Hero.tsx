@@ -69,8 +69,8 @@ const Hero = () => {
             <motion.button
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              {/* onClick={() => document.querySelector("#services")?.scrollIntoView({ behavior: "smooth" })} */}
-            onClick={() => window.open("https://calendly.com/barry-guze-next", "_blank")}
+              onClick={() => document.querySelector("#services")?.scrollIntoView({ behavior: "smooth" })} 
+            {/*  onClick={() => window.open("https://calendly.com/barry-guze-next", "_blank")} */}
               className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg border border-border bg-secondary/50 text-foreground font-semibold text-base hover:bg-secondary transition-all"
             >
               Explore Services
