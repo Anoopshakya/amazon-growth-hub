@@ -55,13 +55,10 @@ const Navbar = () => {
           ))}
           <li>
             <button
-  onClick={() =>
-    window.Calendly.initPopupWidget({
-      url: "https://calendly.com/barry-guze-next"
-    })
-  }
-  className="inline-flex items-center justify-center rounded-lg bg-primary px-6 py-3 text-white font-medium transition hover:opacity-90"
->
+              onClick={() => window.open("https://calendly.com/barry-guze-next", "_blank")}
+              }
+              className="inline-flex items-center justify-center rounded-lg bg-primary px-6 py-3 text-white font-medium transition hover:opacity-90"
+            >
   Book a Call
 </button>
           </li>
