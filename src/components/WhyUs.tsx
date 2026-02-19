@@ -1,58 +1,74 @@
 import { motion } from "framer-motion";
-import { Brain, Shield, Zap, Users, LineChart, Clock } from "lucide-react";
+import { Shield, Truck, Zap, Users, LineChart, Clock } from "lucide-react";
 
 const reasons = [
   {
-    icon: Brain,
-    title: "AI-Powered Intelligence",
-    desc: "Proprietary automation tools analyze thousands of data points to optimize every decision.",
+    icon: Users,
+    title: "Battle-Tested Expertise",
+    desc: "Every team member is hand-trained by our founder to think like an owner. We apply the same $20M+ strategies that worked for us to your brand.",
+  },
+  {
+    icon: Truck,
+    title: "Logistics-First Growth",
+    desc: "While others only focus on PPC, we handle the 'un-sexy' logistics that actually protect your profit—from customs hurdles and 3PL coordination to FBA reconciliations.",
   },
   {
     icon: Shield,
     title: "Zero-Risk Recovery",
-    desc: "No recovery = no fee. We only win when you win. Typical 2-5% of revenue recovered.",
-  },
-  {
-    icon: Zap,
-    title: "Speed to Impact",
-    desc: "30/60/90 framework delivers measurable results starting week one, not month six.",
-  },
-  {
-    icon: Users,
-    title: "Veteran Operators",
-    desc: "Former Amazon category managers, agency leaders, and brand operators—not junior freelancers.",
+    desc: "No recovery = no fee. Our Financial Forensics process is built on a decade of being overcharged by Amazon. Typical 2-5% of revenue recovered.",
   },
   {
     icon: LineChart,
-    title: "Full-Stack Coverage",
-    desc: "From SEO to logistics, we cover every lever so nothing falls through the cracks.",
+    title: "Total Transparency",
+    desc: "We focus on the KPIs that matter to your bottom line: Contribution Margin, TACOS, and In-Stock %. Weekly scorecards with named owners.",
+  },
+  {
+    icon: Zap,
+    title: "Operator-Led, AI-Augmented",
+    desc: "The AI is the tool—our $20M-revenue-proven team is the pilot. No junior account managers learning on your dime.",
   },
   {
     icon: Clock,
-    title: "Weekly Accountability",
-    desc: "Scorecards, ops reviews, and named owners for every action. Total transparency.",
+    title: "30/60/90 Day Results",
+    desc: "Our proven framework delivers measurable results from week one. Audit → Rebuild → Scale → Govern. No six-month ramp-ups.",
   },
 ];
 
 const WhyUs = () => {
   return (
-    <section className="section-padding bg-card relative overflow-hidden">
+    <section id="why-us" className="section-padding bg-card relative overflow-hidden">
       {/* Grid pattern */}
-      <div className="absolute inset-0 grid-pattern opacity-20" />
+      <div className="absolute inset-0 grid-pattern opacity-15" />
       
       <div className="relative max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-6"
         >
           <p className="text-sm text-primary font-semibold tracking-wider uppercase mb-3">Why NextAI</p>
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
-            Built different, <span className="text-gradient">by design</span>
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 text-foreground">
+            Built by <span className="text-gradient">Operators</span>, Not Account Managers
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            What sets us apart from every other Amazon agency.
+          <p className="text-secondary-foreground text-lg max-w-3xl mx-auto">
+            Most agencies are run by marketers. NextAI Commerce was built by a 10-year Amazon Seller
+            who has been exactly where you are.
+          </p>
+        </motion.div>
+
+        {/* The $20M Perspective callout */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="glass-card rounded-2xl p-6 md:p-8 mb-12 max-w-3xl mx-auto text-center border-primary/20"
+        >
+          <p className="font-display text-lg font-bold text-primary mb-2">The $20M Perspective</p>
+          <p className="text-secondary-foreground leading-relaxed">
+            Our founder didn't just study the Amazon marketplace—he conquered it, scaling his own business
+            to $20M in annual revenue. Having personally consulted for over 1,000 resellers and private label
+            brands, he saw a recurring problem: sellers were drowning in complexity and losing margin to logistics nightmares.
           </p>
         </motion.div>
 
@@ -69,11 +85,23 @@ const WhyUs = () => {
               <div className="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors">
                 <r.icon className="w-5 h-5 text-primary" />
               </div>
-              <h3 className="font-display text-lg font-bold mb-2">{r.title}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">{r.desc}</p>
+              <h3 className="font-display text-lg font-bold mb-2 text-foreground">{r.title}</h3>
+              <p className="text-sm text-secondary-foreground leading-relaxed">{r.desc}</p>
             </motion.div>
           ))}
         </div>
+
+        {/* Mission statement */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mt-12 text-center"
+        >
+          <p className="text-secondary-foreground text-lg max-w-2xl mx-auto leading-relaxed italic">
+            "Stop managing complexity. Start scaling with a team that has already been there."
+          </p>
+        </motion.div>
       </div>
     </section>
   );

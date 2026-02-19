@@ -23,10 +23,10 @@ const Contact = () => {
           className="text-center"
         >
           <p className="text-sm text-primary font-semibold tracking-wider uppercase mb-3">Get Started</p>
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-6xl font-bold mb-4">
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-6xl font-bold mb-4 text-foreground">
             Ready to <span className="text-gradient">scale?</span>
           </h2>
-          <p className="text-muted-foreground text-lg max-w-xl mx-auto mb-10">
+          <p className="text-secondary-foreground text-lg max-w-xl mx-auto mb-10">
             Book a free strategy call. We'll audit your account, show you the gaps, and map out a 90-day plan—no strings attached.
           </p>
 
@@ -35,7 +35,7 @@ const Contact = () => {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               href="mailto:hello@nextaicommerce.com"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg bg-primary text-primary-foreground font-semibold text-base hover:brightness-110 transition-all shadow-[0_0_30px_-5px_hsl(100_60%_45%/0.3)]"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg bg-primary text-primary-foreground font-semibold text-base hover:brightness-110 transition-all shadow-[0_0_30px_-5px_hsl(88_68%_48%/0.3)]"
             >
               <Mail className="w-5 h-5" />
               Email Us

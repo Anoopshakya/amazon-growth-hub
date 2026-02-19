@@ -9,15 +9,14 @@ const services = [
     tagline: "Be the brand customers actually find—and buy from.",
     description: "Full-service catalog hygiene, Buy Box optimization, listing conversion, inventory management, customer experience, and weekly reporting.",
     bullets: [
-      "Catalog Hygiene & Compliance — variations, attributes, images, suppressed/stranded fixes, policy appeals",
-      "Buy Box & Pricing Ops — MAP guardrails, promo planning, repricer coordination",
-      "Listing Quality & Conversion — A+ Content, Store, alt text, backend terms from real search intent",
-      "Inventory & FBA Admin — inbounds, carton/pallet plans, capacity limits, restock alerts",
-      "CX & Reviews — proactive CS macros, response SLAs, review/NCX monitoring",
-      "Reporting & Governance — weekly scorecard + monthly ops review with actions, owners, dates",
+      "Catalog Hygiene & Compliance — variations, attributes, images, browse nodes, suppressed/stranded fixes, policy appeals, and brand protection",
+      "Buy Box & Pricing Ops — MAP guardrails, promo planning, and repricer coordination to improve Buy Box% without eroding margin",
+      "Listing Quality & Conversion — title/bullets, A+ Content, Store, alt text, and backend terms tuned from real search intent",
+      "Inventory & FBA Admin — inbounds/WROs, carton/pallet plans, capacity limits, restock alerts, and check-in reconciliation",
+      "CX & Reviews — proactive CS macros, response SLAs, templated resolution flows, and review/NCX monitoring to protect ODR",
+      "Reporting & Governance — weekly scorecard + monthly ops review with actions, owners, and dates",
     ],
-    kpis: ["Buy Box %", "Sessions", "CVR", "ODR", "In-Stock %", "TACOS"],
-    gradient: "from-primary/20 to-primary/5",
+    kpis: ["Buy Box %", "Sessions", "CVR", "ODR", "In-Stock %", "TACOS", "Contribution Margin"],
   },
   {
     icon: Megaphone,
@@ -25,47 +24,44 @@ const services = [
     tagline: "Turn search intent into profitable orders.",
     description: "Complete keyword-to-conversion pipeline: SEO foundation, SP/SB/SD campaigns, creative testing, budget automation, and full measurement.",
     bullets: [
-      "SEO Foundation — keyword map, listing rewrites, image briefs, A+ modules, Store taxonomy",
-      "Campaign System — SP/SB/SD with Research → Harvest → Scale stages",
-      "Creative That Converts — SB Video, headline tests, lifestyle imagery, editorial angles",
-      "Budget & Bid Automation — rule-based bid moves, budget reallocation, placement multipliers",
-      "Measurement — TACOS/ROAS, CVR/CTR, CPC trends, incremental NTB",
-      "30/60/90 Launch — audit → rebuild → harvest → scale → efficiency tuning",
+      "SEO Foundation — keyword map, listing rewrites, image briefs, A+ modules, Store taxonomy, and backend terms",
+      "Campaign System — SP/SB/SD portfolios with Research → Harvest → Scale stages; exact/phrase isolation, negatives, dayparting",
+      "Creative That Converts — SB Video, Store-linked SB headline tests, lifestyle/benefit imagery, and editorial angles",
+      "Budget & Bid Automation — rule-based bid moves, budget reallocation, placement multipliers, and new-to-brand capture",
+      "Measurement — TACOS/ROAS, CVR/CTR, CPC trends, search term gainers/losers, incremental NTB, and campaign guardrails",
+      "30/60/90 Launch — 1) audit + rebuild, 2) harvest + scale, 3) efficiency tuning toward target TACOS",
     ],
     kpis: ["TACOS", "ROAS", "CVR/CTR", "CPC Trends", "NTB Revenue"],
-    gradient: "from-primary/20 to-primary/5",
   },
   {
     icon: DollarSign,
     title: "Recovery & Reimbursement",
     tagline: "Get your money back—safely and by the book.",
-    description: "Evidence-first FBA audits, ToS-compliant case filing, and optional 3PL/parcel invoice audits. Zero-risk pricing: no recovery = no fee.",
+    description: "Evidence-first FBA audits based on Financial Forensics learned from a decade of being overcharged by Amazon. ToS-compliant case filing, and optional 3PL/parcel invoice audits. Zero-risk pricing: no recovery = no fee.",
     bullets: [
-      "FBA Audits — lost/damaged, over-receipts, returns not returned, overcharged storage",
-      "Evidence-First Cases — time-boxed lookbacks, SKU-level proof, ToS-compliant wording",
-      "3PL/Parcel Invoice Audits — UPS/FedEx bill review for errors, late guarantees",
-      "Zero-Risk Pricing — % of funds actually recovered, no recovery = no fee",
-      "6–18 Month Lookback — high-velocity ASINs, frequent returns, big restock cycles",
-      "SKU-Level Proof & Tracking — complete documentation and case tracking to closure",
+      "FBA Audits — lost/damaged, over-receipts, returns not returned, over-weight/dims, overcharged storage, removals/disposals, carrier issues",
+      "Evidence-First Cases — time-boxed lookbacks, SKU-level proof, ToS-compliant wording, and case tracking to closure",
+      "3PL/Parcel Invoice Audits — UPS/FedEx bill review for errors, late guarantees, residential/ODA mis-codes",
+      "Zero-Risk Pricing — % of funds actually recovered. No recovery = no fee",
+      "Financial Forensics — decade of experience identifying where Amazon overcharges sellers systematically",
+      "6–18 Month Lookback — high-velocity ASINs, frequent returns, and big restock cycles",
     ],
-    kpis: ["No recovery = No fee", "2-5% revenue recovered"],
-    gradient: "from-primary/20 to-primary/5",
+    kpis: ["No recovery = No fee", "2-5% revenue recovered", "$2.1M+ total recovered"],
   },
   {
     icon: Truck,
     title: "Logistics & Forecasting",
-    tagline: "Right inventory, right place, right time.",
-    description: "Demand forecasting, replenishment engine, FBA inbound planning, and exception handling with continuous optimization loops.",
+    tagline: "End-to-End Logistics Resilience. Right inventory, right place, right time.",
+    description: "We handle the 'un-sexy' side of Amazon that others ignore: freight forwarding, customs hurdles, 3PL coordination, and FBA shipment reconciliations. If it's stuck in a warehouse, we're the ones getting it out.",
     bullets: [
-      "Demand Forecast — 104-week history, seasonality, promo plans, stockout corrections",
-      "Min/Max & ROP Engine — triggers when projected DOH < threshold per SKU",
-      "FBA Inbound Planning — ASIN→FC split, cartonization & pallet plans, label sets",
-      "Execution — WROs, partnered/non-partnered freight, check-in reconciliation",
-      "Exception Handling — expedite triggers, allocation across DCs, kill-switch for slow movers",
-      "Optimization Loops — forecast error learning, lead-time recalibration, cannibalization analysis",
+      "Demand Forecast — 104-week history, seasonality, promo plans, price changes, stockouts, lead times, MOQs, case-packs, returns, and restock limits",
+      "Replenishment Engine — Min/Max & ROP per SKU, triggers when projected DOH < threshold, safety stock by service level",
+      "FBA Inbound Planning — ASIN→FC split, cartonization & pallet plans, label sets (FNSKU/box/pallet), ASN & BOL package",
+      "Execution — WROs, partnered/non-partnered freight, customs, 3PL coordination, check-in reconciliation",
+      "Exception Handling — expedite triggers, allocation across DCs, kill-switch for slow movers, shortage reconciliation",
+      "Optimization Loops — forecast error learning, lead-time recalibration, demand cannibalization, what-if scenarios",
     ],
-    kpis: ["MAPE", "In-Stock %", "DOH", "Turns", "Excess/Aged %"],
-    gradient: "from-primary/20 to-primary/5",
+    kpis: ["MAPE", "In-Stock %", "DOH", "Turns", "Excess/Aged %", "Check-in SLA"],
   },
 ];
 
@@ -84,12 +80,12 @@ const Services = () => {
           className="text-center mb-16"
         >
           <p className="text-sm text-primary font-semibold tracking-wider uppercase mb-3">Services</p>
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 text-foreground">
             Everything you need to
             <br />
             <span className="text-gradient">dominate Amazon</span>
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+          <p className="text-secondary-foreground text-lg max-w-2xl mx-auto">
             Four integrated pillars that cover every lever of Amazon profitability.
           </p>
         </motion.div>
@@ -106,8 +102,8 @@ const Services = () => {
               onClick={() => setActiveIdx(i)}
               className={`flex items-center gap-2 px-5 py-3 rounded-lg text-sm font-medium transition-all duration-300 ${
                 activeIdx === i
-                  ? "bg-primary text-primary-foreground shadow-[0_0_20px_-5px_hsl(100_60%_45%/0.3)]"
-                  : "bg-secondary/50 text-muted-foreground hover:text-foreground hover:bg-secondary"
+                  ? "bg-primary text-primary-foreground shadow-[0_0_20px_-5px_hsl(88_68%_48%/0.3)]"
+                  : "bg-secondary/50 text-secondary-foreground hover:text-foreground hover:bg-secondary"
               }`}
             >
               <svc.icon className="w-4 h-4" />
@@ -132,11 +128,11 @@ const Services = () => {
                 <active.icon className="w-6 h-6 text-primary" />
               </div>
               <div>
-                <h3 className="font-display text-2xl font-bold">{active.title}</h3>
+                <h3 className="font-display text-2xl font-bold text-foreground">{active.title}</h3>
                 <p className="text-sm text-primary">{active.tagline}</p>
               </div>
             </div>
-            <p className="text-muted-foreground mb-6 leading-relaxed">{active.description}</p>
+            <p className="text-secondary-foreground mb-6 leading-relaxed">{active.description}</p>
 
             <div className="flex flex-wrap gap-2 mb-6">
               {active.kpis.map((kpi) => (
@@ -172,7 +168,7 @@ const Services = () => {
                     <div className="mt-1.5 w-2 h-2 rounded-full bg-primary shrink-0" />
                     <div>
                       <span className="font-semibold text-foreground text-sm">{title}</span>
-                      {desc && <span className="text-muted-foreground text-sm"> — {desc}</span>}
+                      {desc && <span className="text-secondary-foreground text-sm"> — {desc}</span>}
                     </div>
                   </motion.li>
                 );

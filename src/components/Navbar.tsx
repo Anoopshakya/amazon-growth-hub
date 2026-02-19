@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/logo.png";
+import logoDark from "@/assets/logo-dark.svg";
 
 const navItems = [
   { label: "Services", href: "#services" },
   { label: "Results", href: "#metrics" },
+  { label: "Why Us", href: "#why-us" },
   { label: "Process", href: "#process" },
   { label: "Contact", href: "#contact" },
 ];
@@ -36,7 +37,7 @@ const Navbar = () => {
     >
       <nav className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
         <a href="#" className="flex items-center gap-2" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-          <img src={logo} alt="NextAI Commerce" className="h-10" />
+          <img src={logoDark} alt="NextAI Commerce" className="h-9" />
         </a>
 
         {/* Desktop */}
@@ -45,7 +46,7 @@ const Navbar = () => {
             <li key={item.href}>
               <button
                 onClick={() => handleClick(item.href)}
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors relative group"
+                className="text-sm font-medium text-secondary-foreground hover:text-foreground transition-colors relative group"
               >
                 {item.label}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
@@ -57,7 +58,7 @@ const Navbar = () => {
               onClick={() => handleClick("#contact")}
               className="px-5 py-2.5 rounded-lg bg-primary text-primary-foreground font-semibold text-sm hover:brightness-110 transition-all"
             >
-              Get Started
+              Book a Call
             </button>
           </li>
         </ul>
@@ -86,7 +87,7 @@ const Navbar = () => {
                 <li key={item.href}>
                   <button
                     onClick={() => handleClick(item.href)}
-                    className="w-full text-left py-3 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                    className="w-full text-left py-3 text-sm font-medium text-secondary-foreground hover:text-foreground transition-colors"
                   >
                     {item.label}
                   </button>
@@ -97,7 +98,7 @@ const Navbar = () => {
                   onClick={() => handleClick("#contact")}
                   className="w-full px-5 py-3 rounded-lg bg-primary text-primary-foreground font-semibold text-sm"
                 >
-                  Get Started
+                  Book a Call
                 </button>
               </li>
             </ul>

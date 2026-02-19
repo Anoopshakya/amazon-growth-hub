@@ -1,4 +1,4 @@
-import logo from "@/assets/logo.png";
+import logoDark from "@/assets/logo-dark.svg";
 
 const footerLinks = {
   Services: ["Account Management", "Advertising + SEO", "Recovery", "Logistics"],
@@ -13,10 +13,16 @@ const Footer = () => {
         <div className="grid md:grid-cols-5 gap-12 mb-12">
           {/* Brand */}
           <div className="md:col-span-2">
-            <img src={logo} alt="NextAI Commerce" className="h-10 mb-4" />
-            <p className="text-sm text-muted-foreground max-w-xs leading-relaxed">
-              Scale faster on Amazon with human expertise and AI automation. Optimize listings, profits, ads, and inventory.
+            <img src={logoDark} alt="NextAI Commerce" className="h-9 mb-4" />
+            <p className="text-sm text-secondary-foreground max-w-xs leading-relaxed mb-4">
+              Scale faster on Amazon with battle-tested operator expertise and intelligent automation.
             </p>
+            {/* Pedigree badge */}
+            <div className="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-primary/10 border border-primary/20">
+              <span className="text-xs text-primary font-semibold">
+                Founded by former Eva Founder · 10+ Years Active Selling
+              </span>
+            </div>
           </div>
 
           {/* Links */}
@@ -26,7 +32,7 @@ const Footer = () => {
               <ul className="space-y-3">
                 {links.map((link) => (
                   <li key={link}>
-                    <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                    <a href="#" className="text-sm text-secondary-foreground hover:text-foreground transition-colors">
                       {link}
                     </a>
                   </li>

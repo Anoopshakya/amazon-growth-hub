@@ -50,7 +50,7 @@ const Process = () => {
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
             30/60/90 day <span className="text-gradient">framework</span>
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+          <p className="text-secondary-foreground text-lg max-w-2xl mx-auto">
             A proven framework that delivers measurable results from day one.
           </p>
         </motion.div>
@@ -90,7 +90,7 @@ const Process = () => {
                     </div>
 
                     <div className="flex-1">
-                      <p className="text-muted-foreground mb-4">{step.desc}</p>
+                      <p className="text-secondary-foreground mb-4">{step.desc}</p>
                       <div className="grid grid-cols-2 gap-2">
                         {step.details.map((d) => (
                           <div key={d} className="flex items-center gap-2 text-sm text-secondary-foreground">
